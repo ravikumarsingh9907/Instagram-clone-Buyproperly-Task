@@ -195,7 +195,7 @@ button:hover {
 
 @media only screen and (max-width: 624px) {
   .container {
-    min-height: 560px;
+    min-height: 445px;
   }
 
   .section-2 {

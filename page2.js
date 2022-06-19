@@ -30,7 +30,6 @@ Object.keys(codeLocation).forEach((key) => {
 const commentForm = document.querySelector(".submit-btn");
 const username = document.getElementById("username");
 const feedback = document.getElementById("feedback");
-const commentSection = document.querySelector(".comment-section");
 const AppendBefore = document.querySelector(".leave-comment");
 
 // Getting key of code data
