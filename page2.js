@@ -97,18 +97,30 @@ postContainer.innerHTML = `
 
 AppendIn.prepend(postContainer);
 
+const displayAlert = document.querySelector(".alert");
+
 // Lesting to the feedback form
 commentForm.addEventListener("click", (e) => {
   e.preventDefault();
   const getUsername = username.value;
   const getFeedback = feedback.value;
 
-  const userFeedback = document.createElement("div");
-  userFeedback.classList.add("comments");
-  userFeedback.innerHTML = `<span class="username">${getUsername}</span>
+  const hideAlert = function () {
+    displayAlert.classList.add("hide");
+  };
+
+  if (getUsername.length == 0 || getFeedback.length == 0) {
+    displayAlert.classList.remove("hide");
+
+    setTimeout(hideAlert, 2000);
+  } else {
+    const userFeedback = document.createElement("div");
+    userFeedback.classList.add("comments");
+    userFeedback.innerHTML = `<span class="username">${getUsername}</span>
   <p class="feedback">${getFeedback}</p>`;
 
-  AppendBefore.before(userFeedback);
+    AppendBefore.before(userFeedback);
+  }
 
   username.value = "";
   feedback.value = "";

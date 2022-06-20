@@ -24,18 +24,23 @@
     <div class="page2-wrapper">
       <div class="post-container">
         <div class="comment-section">
+          <div class="alert hide">
+            <p class="alert-message">Both fields are required</p>
+          </div>
           <form class="leave-comment">
             <input
               class="username"
               type="text"
               placeholder="author"
               id="username"
+              required
             />
             <input
               class="feedback"
               type="text"
               placeholder="comment"
               id="feedback"
+              required
             />
             <button type="submit" style="visibility: hidden" class="submit-btn">
               submit

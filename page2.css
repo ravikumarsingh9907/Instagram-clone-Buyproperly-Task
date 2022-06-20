@@ -162,6 +162,14 @@ button:hover {
   min-width: 50%;
 }
 
+.alert {
+  background-color: #ff000080;
+  padding: 5px;
+  border-radius: 10px;
+  max-width: 90%;
+  color: white;
+}
+
 .comments {
   display: flex;
   padding: 0.8em 0.4em 0.8em 0px;
